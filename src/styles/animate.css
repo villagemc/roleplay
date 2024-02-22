@@ -1,0 +1,83 @@
+@keyframes draw {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  max-width: 150px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1280px) {
+  .animate {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .animate {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .animate {
+    max-width: 100px;
+    top: 35px;
+    left: 50%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .animate {
+    display: none;
+  }
+}
+
+.animate-color {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  max-width: 100px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  .animate-color {
+    max-width: 90px;
+    top: 120px;
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 851px) {
+  .animate-color {
+    top: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .animate-color {
+    top: 120px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .animate-color {
+    top: 160px;
+  }
+}
+
+.animate path, .animate-color path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw 3s ease-in-out forwards;
+}

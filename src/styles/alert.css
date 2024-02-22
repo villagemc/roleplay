@@ -1,0 +1,38 @@
+.alert__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .alert__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alert__card {
+  background-color: rgba(var(--color), .1);
+  border-radius: 25px;
+  padding: 40px 35px 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.alert__icon {
+  color: rgb(var(--color));
+  font-size: 48px;
+}
+
+.alert__title {
+  color: rgb(var(--color));
+  margin: 30px 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.alert__subtitle {
+  color: rgb(var(--color));
+  font-size: 14px;
+  font-weight: 400;
+}

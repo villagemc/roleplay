@@ -1,0 +1,126 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 3;
+  background-color: var(--color-back);
+}
+
+.sticky__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.sticky__block, .sticky__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.sticky__logo, .sticky__image {
+  max-width: 62px;
+  width: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__logo, .sticky__image {
+    max-width: 47px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__navigate {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+  }
+
+  .sticky__navigate_noactive {
+    display: none;
+  }
+}
+
+.sticky__links {
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__links {
+    padding: 76px 0 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-back);
+  }
+}
+
+.sticky__item {
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-main);
+  font-weight: 500;
+  font-size: 16px;
+  transition: all .3s;
+}
+
+.sticky__item:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__item {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .sticky__item:hover {
+    width: 93%;
+    opacity: 1;
+  }
+}
+
+.sticky__link {
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sticky__button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--color-font);
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__button {
+    display: none;
+  }
+}
+
+.sticky__menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky__menu {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: inherit;
+  }
+}
