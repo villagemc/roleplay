@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { initialInput, initialModal } from "../../initials/initials";
 import PopupItem from "./PopupItem";
 
@@ -26,10 +26,6 @@ function PopupForm() {
       }));
     }
   }
-
-  useEffect(() => {
-    console.log(error);
-  }, [error])
 
   return (
     <form className="popup__form" id="form">
