@@ -10,17 +10,24 @@ import {
 function Sticky() {
   const [ isActive, setIsActive ] = useState(true);
 
-  const toggleNavigate = () => setIsActive(!isActive);
-  const closeNavigate = () => setIsActive(true);
+  const toggleNavigate = () => {
+    setIsActive(!isActive);
+  }
+
+  const closeNavigate = () => {
+    setIsActive(true);
+  }
 
   const handleClick = (e) => {
     if (e.target.classList.contains('sticky__navigate'))
       closeNavigate();
-  };
+  }
 
   const ComponentIcon = initialIconSticky.icon;
 
   const classActive = isActive && 'sticky__navigate_noactive';
+
+  console.log(location);
 
   return (
     <div className="sticky">
@@ -36,7 +43,11 @@ function Sticky() {
           <nav onClick={handleClick} className={`sticky__navigate ${classActive}`}>
             <ul className='sticky__links'>
               {initialLinks.map((link, id) =>
-                <StickyLink key={id} link={link} toggleNavigate={toggleNavigate} />
+                <StickyLink
+                  key={id}
+                  link={link}
+                  toggleNavigate={toggleNavigate}
+                />
               )}
             </ul>
           </nav>

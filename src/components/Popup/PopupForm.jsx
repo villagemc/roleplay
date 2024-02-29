@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { initialInput, initialModal } from "../../initials/initials";
 import PopupItem from "./PopupItem";
+import PopupCheck from "./PopupCheck";
 
 function PopupForm() {
   const [ disabled, setDisabled ] = useState(true);
   const [ error, setError ] = useState({});
-  const { discord, condition } = initialModal.desc;
 
   const handleChange = (event) => {
     const { form } = document.forms;
@@ -40,27 +40,19 @@ function PopupForm() {
           />
         )}
       </ul>
-      <div className="popup__item">
-        <div className="popup__condition">
-          <input
-            onChange={handleChange}
-            className="popup__check"
-            name={initialModal.name}
-            id="check"
-            type="checkbox"
-            value="true"
-            required
-          />
-          <label className="popup__desc" htmlFor="check">
-            <span>{discord.text} </span> 
-            <a className="popup__link" href={discord.href}>{discord.name}</a>
-            <span> {condition.text} </span>
-            <a className="popup__link" href={condition.href}>{condition.name}</a>
-          </label>
-        </div>
-        <span className="popup__error">{error[initialModal.name] ?? ''}</span>
-      </div>
-      <button className="popup__submit" type="submit" disabled={disabled}>
+      <PopupCheck
+        init={initialModal}
+        error={error}
+        handleChange={handleChange}
+      />
+      <button
+        className="popup__submit"
+        type="submit"
+        disabled={disabled}
+        title={disabled
+          ? initialModal.active.no
+          : initialModal.active.yes
+        }>
         {initialModal.button}
       </button>
     </form>

@@ -217,6 +217,10 @@ export const initialModal = {
     }
   },
   button: 'Купить проходку за 49 Р',
+  active: {
+    no: 'Заполните все поля формы!',
+    yes: 'Смело отправляйте заявку!'
+  },
   icon: TfiClose
 };
 
