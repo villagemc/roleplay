@@ -27,8 +27,6 @@ function Sticky() {
 
   const classActive = isActive && 'sticky__navigate_noactive';
 
-  console.log(location);
-
   return (
     <div className="sticky">
       <div className="sticky__container container">
