@@ -17,7 +17,9 @@ function AnswerCard({faq, icon}) {
         <ComponentIcon className={`answer__card-icon ${activeClassIcon}`} />
       </button>
       <div className={`answer__card-block ${activeClassAnswer}`}>
-        <p className="answer__card-answer">{faq.answer}</p>
+        <div className="answer-card-subblock">
+          <p className="answer__card-answer">{faq.answer}</p>
+        </div>
       </div>
     </li>
   )

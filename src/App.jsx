@@ -18,9 +18,15 @@ function App() {
       <Sticky />
       <Header />
       <main>
-        <Info info={initialInfoOne} />
+        <Info
+          info={initialInfoOne}
+          infoID={"more"}
+        />
         <Alert />
-        <Info info={initialInfoTwo} />
+        <Info
+          info={initialInfoTwo}
+          infoID={false}
+        />
         <Answer />
         <Price />
       </main>

@@ -1,8 +1,8 @@
 import InfoText from "./InfoText";
 
-function Info({info}) {
+function Info({info, infoID}) {
   return (
-    <section className="info" id="more">
+    <section className="info" id={infoID}>
       <div className="info__container container">
         <div className="info__block">
           <h2 className="info__title">{info.title}</h2>
